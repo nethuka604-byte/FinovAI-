@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinovAI - Smart Personal Finance & AI Tools</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { 50: '#ecfdf5', 500: '#10b981', 600: '#059669', 900: '#064e3b' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between">
+
+    <header class="bg-slate-900/95 backdrop-blur border-b border-slate-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center gap-3">
+             <a href="index.html" class="flex items-center gap-2 font-bold text-xl text-white">
+      <svg class="w-8 h-8 text-emerald-400 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+    </svg>
+   <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent font-extrabold">FinovAI</span>
+   <span class="text-xs bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-500/30">PRO</span>
+   </a>
+
+            </div>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="index.html" class="hover:text-emerald-400 transition-colors">Home</a>
+                <a href="calculators.html" class="hover:text-emerald-400 transition-colors">Calculators</a>
+                <a href="ai-tools.html" class="hover:text-emerald-400 transition-colors">AI Tools Directory</a>
+                <a href="guides.html" class="hover:text-emerald-400 transition-colors">Guides & Income</a>
+                <a href="blog.html" class="hover:text-emerald-400 transition-colors">Blog</a>
+            </nav>
+            <div class="hidden md:flex items-center gap-4">
+                <a href="calculators.html" class="px-4 py-2 text-sm font-semibold text-slate-900 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-lg hover:opacity-90 transition shadow-lg shadow-emerald-500/20">Launch Tools</a>
+            </div>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400 hover:text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-2">
+        <a href="index.html" class="block py-2 text-slate-300 hover:text-emerald-400">Home</a>
+        <a href="calculators.html" class="block py-2 text-slate-300 hover:text-emerald-400">Calculators</a>
+        <a href="ai-tools.html" class="block py-2 text-slate-300 hover:text-emerald-400">AI Tools Directory</a>
+        <a href="guides.html" class="block py-2 text-slate-300 hover:text-emerald-400">Guides & Income</a>
+        <a href="blog.html" class="block py-2 text-slate-300 hover:text-emerald-400">Blog</a>
+    </div>
+</header>
+
+    <!-- HERO SECTION -->
+    <section class="relative py-20 overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(16,185,129,0.15),transparent_50%)]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        AI-Powered Financial Intelligence
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Master Your Money with <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">AI Precision</span>
+                    </h1>
+                    <p class="text-lg text-slate-300 leading-relaxed">
+                        Combine smart algorithms with proven wealth strategies. Calculate budgets, discover AI finance tools, build passive income streams, and reach financial freedom faster.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="calculators.html" class="px-6 py-3 font-semibold rounded-xl bg-gradient-to-r from-emerald-400 to-cyan-500 text-slate-950 hover:shadow-lg hover:shadow-emerald-500/25 transition transform hover:-translate-y-0.5">Explore Calculators</a>
+                        <a href="ai-tools.html" class="px-6 py-3 font-semibold rounded-xl bg-slate-800 text-white border border-slate-700 hover:bg-slate-700 transition">View AI Directory</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900/80 p-2">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80" alt="Finance and AI Concept" class="rounded-xl w-full h-80 object-cover">
+                        <div class="absolute bottom-6 left-6 right-6 bg-slate-900/90 backdrop-blur-md p-4 rounded-xl border border-slate-700/50">
+                            <div class="flex items-center justify-between text-xs text-slate-400 mb-1">
+                                <span>Monthly Savings Goal</span>
+                                <span class="text-emerald-400 font-bold">+34.8% YoY</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-emerald-400 to-cyan-400 h-full w-[78%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK STATS & FEATURES -->
+    <section class="py-16 bg-slate-900/50 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-emerald-500/30 transition">
+                    <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Smart Calculators</h3>
+                    <p class="text-slate-400 text-sm">Interactive 50/30/20 budgeting and compound growth projections built for immediate decisions.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-emerald-500/30 transition">
+                    <div class="w-12 h-12 bg-cyan-500/10 text-cyan-400 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Curated AI Tools</h3>
+                    <p class="text-slate-400 text-sm">Hand-picked AI platforms for automated receipt scanning, smart investing, and expense management.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-emerald-500/30 transition">
+                    <div class="w-12 h-12 bg-amber-500/10 text-amber-400 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Passive Income Hub</h3>
+                    <p class="text-slate-400 text-sm">Step-by-step blueprints on leveraging AI to build digital assets, printables, and scalable side hustles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE CRYPTO & AI NEWS SECTION -->
+    <section class="py-12 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="crypto-news-container">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-extrabold text-white">🚀 Live Crypto & AI News</h2>
+                    <span class="text-xs text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">Auto-Updates</span>
+                </div>
+                <div id="news-feed" class="news-grid">
+                    <p class="text-slate-400 text-sm">Loading latest updates...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- FEATURED AI TOOLS PREVIEW -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-white">Top AI Financial Tools</h2>
+                    <p class="text-slate-400 mt-2">Automate your finances with these top-rated AI technologies</p>
+                </div>
+                <a href="ai-tools.html" class="text-emerald-400 hover:text-emerald-300 font-semibold text-sm flex items-center gap-1">View All Tools &rarr;</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tool Card 1 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-1 text-xs font-semibold bg-emerald-500/10 text-emerald-400 rounded-md">Expense Tracking</span>
+                            <span class="text-xs text-amber-400 font-bold">★ 4.9</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Cleo AI Assist</h3>
+                        <p class="text-slate-400 text-sm mb-4">AI chat assistant that roasts your spending habits and helps you automatically save money.</p>
+                    </div>
+                    <a href="ai-tools.html" class="w-full py-2 bg-slate-800 hover:bg-slate-700 text-white font-medium text-sm rounded-lg text-center transition">Explore Details</a>
+                </div>
+                <!-- Tool Card 2 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-1 text-xs font-semibold bg-cyan-500/10 text-cyan-400 rounded-md">Investment</span>
+                            <span class="text-xs text-amber-400 font-bold">★ 4.8</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Magnifi AI Search</h3>
+                        <p class="text-slate-400 text-sm mb-4">Natural language AI search engine to discover stocks, ETFs, and portfolio opportunities.</p>
+                    </div>
+                    <a href="ai-tools.html" class="w-full py-2 bg-slate-800 hover:bg-slate-700 text-white font-medium text-sm rounded-lg text-center transition">Explore Details</a>
+                </div>
+                <!-- Tool Card 3 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-400 rounded-md">Automation</span>
+                            <span class="text-xs text-amber-400 font-bold">★ 4.9</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Notion AI Finance</h3>
+                        <p class="text-slate-400 text-sm mb-4">Custom AI templates to auto-summarize monthly invoices, subscriptions, and budgets.</p>
+                    </div>
+                    <a href="ai-tools.html" class="w-full py-2 bg-slate-800 hover:bg-slate-700 text-white font-medium text-sm rounded-lg text-center transition">Explore Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div class="space-y-4">
+                <div class="flex items-center gap-2 text-xl font-bold text-white">
+                    <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    FinAI Hub
+                </div>
+                <p class="text-sm text-slate-400">Empowering your wealth journey with Artificial Intelligence, smart budgeting tools, and actionable financial guides.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-emerald-400">Home</a></li>
+                    <li><a href="calculators.html" class="hover:text-emerald-400">Financial Calculators</a></li>
+                    <li><a href="ai-tools.html" class="hover:text-emerald-400">AI Tools Directory</a></li>
+                    <li><a href="guides.html" class="hover:text-emerald-400">Passive Income Guides</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Calculators</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="calculators.html#budget" class="hover:text-emerald-400">50/30/20 Budgeting</a></li>
+                    <li><a href="calculators.html#compound" class="hover:text-emerald-400">Compound Interest</a></li>
+                    <li><a href="calculators.html#emergency" class="hover:text-emerald-400">Emergency Fund</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Stay Updated</h4>
+                <p class="text-xs text-slate-400 mb-3">Get the latest AI finance strategies directly to your inbox.</p>
+                <form onsubmit="event.preventDefault(); alert('Subscribed successfully!');" class="space-y-2">
+                    <input type="email" placeholder="Enter your email" required class="w-full px-3 py-2 text-sm bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-emerald-400">
+                    <button type="submit" class="w-full py-2 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-semibold text-sm rounded-lg transition">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+    <div class="mt-6 pt-6 border-t border-slate-800 flex justify-center gap-6 text-xs text-slate-400">
+    <a href="about.html" class="hover:text-emerald-400">About Us</a>
+    <a href="privacy.html" class="hover:text-emerald-400">Privacy Policy</a>
+    <a href="terms.html" class="hover:text-emerald-400">Terms & Conditions</a>
+   </div>
+
+        <div class="border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
+            <p>&copy; 2026 FinovAI. All rights reserved. Designed for deployment on Netlify.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+
+<script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="7XNLawcrZl81dmCijto2n";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+
+</body>
+</html>

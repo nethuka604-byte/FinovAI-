@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guides & Passive Income - FinAI Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between">
+
+    <header class="bg-slate-900/95 backdrop-blur border-b border-slate-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-2 text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
+                    <svg class="w-8 h-8 text-emerald-400 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    FinovAI <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold uppercase">PRO</span>
+                </a>
+            </div>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="index.html" class="hover:text-emerald-400 transition-colors">Home</a>
+                <a href="calculators.html" class="hover:text-emerald-400 transition-colors">Calculators</a>
+                <a href="ai-tools.html" class="hover:text-emerald-400 transition-colors">AI Tools Directory</a>
+                <a href="guides.html" class="hover:text-emerald-400 transition-colors">Guides & Income</a>
+                <a href="blog.html" class="hover:text-emerald-400 transition-colors">Blog</a>
+            </nav>
+            <div class="hidden md:flex items-center gap-4">
+                <a href="calculators.html" class="px-4 py-2 text-sm font-semibold text-slate-900 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-lg hover:opacity-90 transition shadow-lg shadow-emerald-500/20">Launch Tools</a>
+            </div>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400 hover:text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-2">
+        <a href="index.html" class="block py-2 text-slate-300 hover:text-emerald-400">Home</a>
+        <a href="calculators.html" class="block py-2 text-slate-300 hover:text-emerald-400">Calculators</a>
+        <a href="ai-tools.html" class="block py-2 text-slate-300 hover:text-emerald-400">AI Tools Directory</a>
+        <a href="guides.html" class="block py-2 text-slate-300 hover:text-emerald-400">Guides & Income</a>
+        <a href="blog.html" class="block py-2 text-slate-300 hover:text-emerald-400">Blog</a>
+    </div>
+</header>
+
+    <main class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">AI & Passive Income Guides</h1>
+            <p class="text-slate-400">Step-by-step strategies to build sustainable side hustles, automate workflows, and create modern digital revenue streams.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Guide 1 -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition flex flex-col">
+                <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=800&q=80" alt="Digital Products" class="h-48 w-full object-cover">
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-amber-500/10 text-amber-400 rounded-md inline-block mb-3">Side Hustles</span>
+                        <h2 class="text-xl font-bold text-white mb-2">Build & Sell Digital Products with AI</h2>
+                        <p class="text-slate-400 text-sm mb-4">Learn how to generate Notion templates, budgeting printables, and micro e-books using ChatGPT and Midjourney, then automate sales on Gumroad.</p>
+                    </div>
+                    <a href="blog.html" class="inline-block text-emerald-400 hover:text-emerald-300 text-sm font-semibold">Read Full Guide &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Guide 2 -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition flex flex-col">
+                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Investing Basics" class="h-48 w-full object-cover">
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-emerald-500/10 text-emerald-400 rounded-md inline-block mb-3">Investing 101</span>
+                        <h2 class="text-xl font-bold text-white mb-2">Beginner's Guide to Index Funds & ETFs</h2>
+                        <p class="text-slate-400 text-sm mb-4">Demystifying low-cost index investing. Understand compound interest, expense ratios, and how to set up automatic dollar-cost averaging.</p>
+                    </div>
+                    <a href="blog.html" class="inline-block text-emerald-400 hover:text-emerald-300 text-sm font-semibold">Read Full Guide &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-emerald-900/30 to-cyan-900/30 border border-emerald-500/30 rounded-2xl p-8 text-center max-w-3xl mx-auto">
+            <h3 class="text-2xl font-bold text-white mb-2">Want Prompt Templates for ChatGPT Finance?</h3>
+            <p class="text-slate-300 text-sm mb-6">Download our free PDF prompt cheat sheet containing 20+ tested prompts to audit expenses and generate budget tables.</p>
+            <button onclick="alert('Download started!')" class="px-6 py-3 bg-gradient-to-r from-emerald-400 to-cyan-400 text-slate-950 font-bold text-sm rounded-xl hover:opacity-90 transition">Download Free Cheat Sheet (PDF)</button>
+        </div>
+    </main>
+
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div class="space-y-4">
+                <div class="flex items-center gap-2 text-xl font-bold text-white">
+                    <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    FinAI Hub
+                </div>
+                <p class="text-sm text-slate-400">Empowering your wealth journey with Artificial Intelligence, smart budgeting tools, and actionable financial guides.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-emerald-400">Home</a></li>
+                    <li><a href="calculators.html" class="hover:text-emerald-400">Financial Calculators</a></li>
+                    <li><a href="ai-tools.html" class="hover:text-emerald-400">AI Tools Directory</a></li>
+                    <li><a href="guides.html" class="hover:text-emerald-400">Passive Income Guides</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Calculators</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="calculators.html#budget" class="hover:text-emerald-400">50/30/20 Budgeting</a></li>
+                    <li><a href="calculators.html#compound" class="hover:text-emerald-400">Compound Interest</a></li>
+                    <li><a href="calculators.html#emergency" class="hover:text-emerald-400">Emergency Fund</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Stay Updated</h4>
+                <p class="text-xs text-slate-400 mb-3">Get the latest AI finance strategies directly to your inbox.</p>
+                <form onsubmit="event.preventDefault(); alert('Subscribed successfully!');" class="space-y-2">
+                    <input type="email" placeholder="Enter your email" required class="w-full px-3 py-2 text-sm bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-emerald-400">
+                    <button type="submit" class="w-full py-2 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-semibold text-sm rounded-lg transition">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
+            <p>&copy; 2026 FinovAI. All rights reserved. Designed for deployment on Netlify.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+
+<script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="7XNLawcrZl81dmCijto2n";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+
+</body>
+</html>
