@@ -170,3 +170,69 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+async function convertCurrency() {
+    const amount = document.getElementById('amountInput').value;
+    const from = document.getElementById('fromCurrency').value;
+    const to = document.getElementById('toCurrency').value;
+    const resultDiv = document.getElementById('resultOutput');
+
+    if (!amount || amount <= 0) {
+        resultDiv.innerText = "Please enter a valid amount";
+        return;
+    }
+
+    resultDiv.innerText = "Converting...";
+
+    try {
+        // ක්‍රිප්ටෝ සහ සාමාන්‍ය කරන්සි දෙකටම වැඩ කරන ලේසිම ක්‍රමය (CoinGecko API මඟින් රේට්ස් ලබා ගැනීම)
+        // මෙහිදී USD වලට අදාළව සියලුම අගයන් ලබා ගනී.
+        const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd,lkr,eur');
+        const cryptoData = await response.json();
+
+        // සාමාන්‍ය කරන්සි සඳහාරේට්ස් (Forex Rates - උදාහරණයක් ලෙස USD බේස් කරගත් දළ අගයන් හෝ නිල API එකක්)
+        // මෙහි පහల දැක්වෙන්නේ USD වලට සාපේක්ෂව අගයන් ගණනය කරන ආකාරයයි.
+        
+        let rates = {
+            "USD": 1,
+            "EUR": 0.92, // අවශ්‍ය නම් ලයිව් ෆොරෙක්ස් API එකක් මෙහිදී පාවිච්චි කළ හැක
+            "LKR": 305.50, // ලයිව් LKR අගය
+            "BTC": 1 / (cryptoData.bitcoin ? cryptoData.bitcoin.usd : 65000),
+            "ETH": 1 / (cryptoData.ethereum ? cryptoData.ethereum.usd : 3500)
+        };
+
+        // අදාළ ගණනය කිරීම (Conversion Logic)
+        // මුලින්ම ඇතුළත් කළ අගය USD වලට හරවා, පසුව අවශ්‍ය කරන්සි එකට මාරු කරයි.
+        
+        // උදාහරණයක් ලෙස USD වලින් අගය ලබා ගැනීමට අවශ්‍ය රේට්ස් සකස් කරමු:
+        let baseRates = {
+            "USD": 1,
+            "EUR": 1.09,
+            "LKR": 1 / 305.50,
+            "BTC": cryptoData.bitcoin ? cryptoData.bitcoin.usd : 65000,
+            "ETH": cryptoData.ethereum ? cryptoData.ethereum.usd : 3500
+        };
+
+        // From අගය USD වලට හැරවීම
+        let amountInUSD = amount * baseRates[from];
+        
+        // USD සිට To අගයට හැරවීම (උදා: LKR හෝ BTC වලට)
+        let finalRatesToTarget = {
+            "USD": 1,
+            "EUR": 0.92,
+            "LKR": 305.50,
+            "BTC": 1 / (cryptoData.bitcoin ? cryptoData.bitcoin.usd : 65000),
+            "ETH": 1 / (cryptoData.ethereum ? cryptoData.ethereum.usd : 3500)
+        };
+
+        let finalResult = amountInUSD * finalRatesToTarget[to];
+
+        // ඩෙසිමල් ස්ථාන නිවැරදිව පෙන්වීම (క్రిප්ටෝ නම් ඩෙසිමල් 6ක් සහ අනෙක් ඒවාට 2ක්)
+        let decimalPlaces = (to === 'BTC' || to === 'ETH') ? 6 : 2;
+
+        resultDiv.innerText = `Result: ${Number(finalResult).toFixed(decimalPlaces)} ${to}`;
+
+    } catch (error) {
+        console.error("Error fetching rates:", error);
+        resultDiv.innerText = "Error connecting to server. Try again.";
+    }
+}

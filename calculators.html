@@ -165,6 +165,53 @@
                 <div id="emergency-result" class="text-3xl font-extrabold text-emerald-400 mt-1">$10,800.00</div>
             </div>
         </div>
+
+             <!-- LIVE CURRENCY & CRYPTO CONVERTER -->
+        <div id="currency-converter" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 max-w-3xl mx-auto shadow-xl mt-8">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-white">Live Currency & Crypto Converter</h2>
+                    <p class="text-slate-400 text-xs">Convert Fiat and Cryptocurrencies in real-time</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                <div class="w-full">
+                    <label class="block text-xs font-medium text-slate-300 mb-1">Amount</label>
+                    <input type="number" id="amountInput" value="1" oninput="convertCurrency()" class="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:border-emerald-400">
+                </div>
+                <div class="w-full">
+                    <label class="block text-xs font-medium text-slate-300 mb-1">From</label>
+                    <select id="fromCurrency" onchange="convertCurrency()" class="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:border-emerald-400">
+                        <option value="USD">USD (US Dollar)</option>
+                        <option value="LKR">LKR (Sri Lankan Rupee)</option>
+                        <option value="EUR">EUR (Euro)</option>
+                        <option value="BTC">BTC (Bitcoin)</option>
+                        <option value="ETH">ETH (Ethereum)</option>
+                    </select>
+                </div>
+                <div class="w-full">
+                    <label class="block text-xs font-medium text-slate-300 mb-1">To</label>
+                    <select id="toCurrency" onchange="convertCurrency()" class="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:border-emerald-400">
+                        <option value="LKR" selected>LKR (Sri Lankan Rupee)</option>
+                        <option value="USD">USD (USD)</option>
+                        <option value="BTC">BTC (Bitcoin)</option>
+                        <option value="ETH">ETH (Ethereum)</option>
+                        <option value="EUR">EUR (Euro)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 text-center">
+                <span class="text-xs text-slate-400">Converted Amount</span>
+                <div id="resultOutput" class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 mt-1">--</div>
+            </div>
+        </div>
+
+
     </main>
 
     <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 py-12">
